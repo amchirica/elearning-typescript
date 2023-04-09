@@ -21,7 +21,10 @@ export default function App({ Component, pageProps, session }: any) {
   }, [setProfile]);
 
   return (
-    <div className="min-h-screen text-sm text-black ">
+    <div
+      onClick={() => authStore.setState({ userProfilePopup: false })}
+      className="min-h-screen text-sm text-black "
+    >
       {getLayout(<Component {...pageProps} />)}
     </div>
   );
