@@ -9,7 +9,6 @@ const Header = () => {
   const router = useRouter();
   const { userProfile, logout, loading, userProfilePopup } = authStore();
   const [initials, setInitials] = useState("");
-  const [connected, setConnected] = useState(userProfile);
 
   useEffect(() => {
     if (userProfile?.connected) {
@@ -19,8 +18,6 @@ const Header = () => {
       setInitials(ini);
     }
   }, [userProfile]);
-
-  console.log(userProfile);
 
   const handleLogout = () => {
     logout();
@@ -61,7 +58,7 @@ const Header = () => {
         </Link>
       </div>
       <div>
-        {connected!.connected ? (
+        {userProfile!.connected ? (
           <div
             onClick={(e) => e.stopPropagation()}
             className="flex items-center gap-2 relative"
@@ -78,7 +75,7 @@ const Header = () => {
               <div className="absolute top-[105%] -left-20 w-[7rem] bg-neutral-800 rounded-md text-gray-200 flex flex-col py-2">
                 <button className={buttonClass}>Cursurile mele</button>
                 <Link
-                  href={`/user?${userProfile?.email}`}
+                  href={`/user?user=${userProfile?.email}`}
                   className={buttonClass}
                 >
                   <button>Profilul meu</button>

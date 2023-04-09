@@ -40,7 +40,6 @@ const authStore = create<AuthStore>((set) => ({
                 method: "GET",
                 url: `/api/auth/checkUser`
             })
-            console.log(data);
             const profile = {
                 ...data.user,
                 connected: true 
