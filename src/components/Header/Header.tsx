@@ -17,12 +17,21 @@ const Header = () => {
 
   const [userMenu, setUserMenu] = useState(false);
   return (
-    <div className="bg-neutral-100 h-[5rem] flex justify-between items-center px-2">
-      <div className="hidden md:flex">E-learning</div>
+    <div className="z-20 bg-neutral-100 h-[5rem] flex justify-between items-center px-2">
+      <div className="h-20 hidden md:flex"><img src="/images/logo.png"/>E-learning</div>
+
+
       <div className="flex gap-4">
+         
+
         <Link href="/">
           <button className="text-neutral-500 hover:text-black ease-in-out duration-300">
             Home
+          </button>
+        </Link>
+        <Link href="/about">
+          <button className="text-neutral-500 hover:text-black ease-in-out duration-300">
+           About
           </button>
         </Link>
         <Link href="/courses">
@@ -35,13 +44,11 @@ const Header = () => {
             Contact
           </button>
         </Link>
-        <Link href="/about">
-          <button className="text-neutral-500 hover:text-black ease-in-out duration-300">
-           About
-          </button>
-        </Link>
+
       </div>
+
       <div>
+
         {userProfile!.connected ? (
           <div className="flex items-center gap-2 relative">
             <button
@@ -52,9 +59,9 @@ const Header = () => {
             </button>
             {userMenu ? (
               <div className="absolute top-[105%] -left-20 w-[7rem] bg-neutral-800 p-2 rounded-md text-gray-200 flex flex-col gap-2">
-                <button>Profilul meu</button>
-                <button>Profilul meu</button>
-                <button>Profilul meu</button>
+                <button>My profile</button>
+                <button>My repositories</button>
+                <button>Domains</button>
                 <button onClick={() => logout()}>Logout</button>
               </div>
             ) : null}
