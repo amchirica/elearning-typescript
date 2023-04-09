@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Link from "next/link";
 import axios from "axios";
 import authStore from "@/store/globalStore";
+import DefaultButton from "@/components/Buttons/DefaultButton";
 
 export const Login = () => {
   const {
@@ -17,8 +18,20 @@ export const Login = () => {
   });
   const router = useRouter();
 
+  useEffect(() => {
+    authStore.setState({
+      apiResponse: {
+        message: null,
+        status: null,
+      },
+    });
+  }, []);
+
   const handleLogin = async (e: any) => {
     e.preventDefault();
+    if (!user.email) {
+      return null;
+    }
     authStore.setState({ loading: true });
     try {
       const { data } = await axios({
@@ -47,7 +60,7 @@ export const Login = () => {
     }
   };
 
-  if (status) {
+  if (status !== null && status) {
     setTimeout(() => {
       authStore.setState({
         apiResponse: {
@@ -111,13 +124,11 @@ export const Login = () => {
             </label>
           </div>
           <div className="flex items-center gap-4">
-            <button
-              onClick={(e) => handleLogin(e)}
-              type="submit"
-              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center "
-            >
-              {loading ? "Asteapta..." : "Conecteaza-te"}
-            </button>
+            <DefaultButton
+              name={"Conecteaza-te"}
+              loading={loading}
+              action={(e: any) => handleLogin(e)}
+            />
             <Link href={"/auth/register"}>
               <button className="text-neutral-400 hover:text-black">
                 Register
