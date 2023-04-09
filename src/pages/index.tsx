@@ -4,7 +4,15 @@ import { ReactElement } from "react";
 const Home = () => {
   return (
     <>
-      <div>asdkslada</div>
+      <div>
+
+
+
+
+
+
+
+      </div>
     </>
   );
 };
