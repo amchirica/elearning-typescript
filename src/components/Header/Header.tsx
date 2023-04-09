@@ -20,24 +20,24 @@ const Header = () => {
     <div className="bg-neutral-100 h-[5rem] flex justify-between items-center px-2">
       <div className="hidden md:flex">E-learning</div>
       <div className="flex gap-4">
-        <Link href="#">
+        <Link href="/">
           <button className="text-neutral-500 hover:text-black ease-in-out duration-300">
-            Acasa
+            Home
           </button>
         </Link>
-        <Link href="#">
+        <Link href="/courses">
           <button className="text-neutral-500 hover:text-black ease-in-out duration-300">
-            Acasa
+            Courses
           </button>
         </Link>
-        <Link href="#">
+        <Link href="/contact">
           <button className="text-neutral-500 hover:text-black ease-in-out duration-300">
-            Acasa
+            Contact
           </button>
         </Link>
-        <Link href="/pagina">
+        <Link href="/about">
           <button className="text-neutral-500 hover:text-black ease-in-out duration-300">
-            Pagina
+           About
           </button>
         </Link>
       </div>
