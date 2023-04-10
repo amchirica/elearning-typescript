@@ -1,7 +1,5 @@
 import MainLayout from "@/layouts/mainLayout";
 import React, { ReactElement, useEffect, useState } from "react";
-import images from "../../images/about-image.jpg";
-import Link from "next/link";
 import axios from "axios";
 import Card from "@/components/CourseCard/Card";
 

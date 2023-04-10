@@ -4,7 +4,6 @@ import prisma from '@/lib/prismaFunctions'
 
 export default auth(handler.put(async (req, res) => {
     const { courseId, userId } = req.body;
-    
     try {
         const data = await prisma.user.update({
             where: {
@@ -29,4 +28,37 @@ export default auth(handler.put(async (req, res) => {
             message: 'Ooops, ceva nu a mers bine!'
         })
     }
+}).post(async (req, res) => {
+    const { courseId, userId } = req.body;
+    const user = await prisma.user.findFirst({
+        where: {
+            email: userId
+        }
+    })
+    console.log(req.body);
+    try {
+        const data = await prisma.user.update({
+            where: {
+                id: user!.id,
+            },
+            data: {
+                courses: {
+                    connect: [{
+                        id: courseId
+                    }]
+                }
+            },
+        })
+        res.status(200).send({
+            message: "Te-ai inrolat cu succes!",
+            data: data
+        })
+    } catch (err) {
+        console.log(err)
+        return res.status(500).send({
+            message: 'Opps, nu te-am putut inrola!'
+        })
+    }
+    
+    return res.status(200)
 }))
