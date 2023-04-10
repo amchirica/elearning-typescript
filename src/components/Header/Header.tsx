@@ -35,7 +35,7 @@ const Header = () => {
   return (
     <div className="z-20 bg-neutral-100 flex items-center justify-between px-10">
       <div className="h-20 md:flex">
-        <img src="/images/icon.png" />
+        <img className="h-[5rem]" src="/images/icon.png" />
       </div>
 
       <div className="flex gap-4">
