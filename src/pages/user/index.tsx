@@ -58,7 +58,7 @@ function UserProfile(props: User) {
   return (
     <div className="bg-neutral-200 m-2 p-2 rounded-md">
       <div>
-        <h2 className="text-xl">Salut {user.firstName}!</h2>
+        <h2 className="text-xl">Salut {user?.firstName}!</h2>
       </div>
       <div className="flex gap-4 flex-col md:flex-row">
         <div className="w-1/3 flex flex-col gap-2">
@@ -66,7 +66,7 @@ function UserProfile(props: User) {
             <span>Email:</span>
             <input
               type="email"
-              defaultValue={profile.email as string}
+              defaultValue={profile?.email as string}
               className="p-2 rounded-md min-w-[15rem] outline-none border-2 border-neutral-200"
             />
           </div>
@@ -74,7 +74,7 @@ function UserProfile(props: User) {
             <span>Nume:</span>
             <input
               type="text"
-              value={profile.lastName as string}
+              value={profile?.lastName as string}
               onChange={(e) =>
                 setProfile({
                   ...profile,
@@ -88,11 +88,11 @@ function UserProfile(props: User) {
             <span>Prenume:</span>
             <input
               type="text"
-              value={profile.firstName as string}
+              value={profile?.firstName as string}
               onChange={(e) =>
                 setProfile({
                   ...profile,
-                  firstName: e.target.value,
+                  firstName: e?.target?.value,
                 })
               }
               className="p-2 rounded-md min-w-[15rem] outline-none border-2 border-neutral-200"
@@ -103,7 +103,7 @@ function UserProfile(props: User) {
             <input
               type="text"
               className="p-2 rounded-md min-w-[15rem] outline-none border-2 border-neutral-200"
-              defaultValue={profile.role as string}
+              defaultValue={profile?.role as string}
             />
           </div>
         </div>
@@ -128,25 +128,27 @@ function UserProfile(props: User) {
                 </tr>
               </thead>
               <tbody>
-                {user.courses.map((item: any, index: number) => (
+                {user?.courses?.map((item: any, index: number) => (
                   <tr
-                    key={item.id}
+                    key={item?.id}
                     className={`${
                       index % 2 === 0 ? "bg-neutral-800" : "bg-neutral-700"
                     } hover:bg-neutral-700`}
                   >
                     <td className="px-4 py-3 whitespace-no-wrap text-sm text-neutral-100 border-b border-neutral-700">
-                      {item.title}
+                      {item?.title}
                     </td>
                     <td className="px-4 py-3 text-sm text-neutral-100 border-b border-neutral-700">
-                      {item.description}
+                      {item?.description}
                     </td>
                     <td className="px-4 py-3 text-sm text-neutral-100 border-b border-neutral-700">
-                      {item.category}
+                      {item?.category}
                     </td>
                     <td className="px-4 py-3 text-sm text-neutral-100 border-b border-neutral-700">
                       <button
-                        onClick={(e: any) => deleteCourse(e, item.id, user.id)}
+                        onClick={(e: any) =>
+                          deleteCourse(e, item?.id, user?.id)
+                        }
                         className="p-2 bg-neutral-400 hover:bg-red-500 rounded-md text-black"
                       >
                         <AiFillDelete />

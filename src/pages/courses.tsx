@@ -68,8 +68,8 @@ const Courses = () => {
         </a>
       </div>
       <div className="flex flex-wrap gap-3 justify-center mb-20">
-        {courses.map((course: any) => (
-          <Card key={course.id} course={course} />
+        {courses?.map((course: any) => (
+          <Card key={course?.id} course={course} />
         ))}
       </div>
     </div>
