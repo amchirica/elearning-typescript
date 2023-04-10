@@ -33,12 +33,20 @@ const Header = () => {
     "hover:bg-neutral-700 ease-in-out duration-300 p-2 text-start";
 
   return (
-    <div className="bg-neutral-100 h-[5rem] flex justify-between items-center px-2">
-      <div className="hidden md:flex">E-learning</div>
+    <div className="z-20 bg-neutral-100 flex items-center justify-between px-10">
+      <div className="h-20 md:flex">
+        <img src="/images/icon.png" />
+      </div>
+
       <div className="flex gap-4">
         <Link href="/">
           <button className="text-neutral-500 hover:text-black ease-in-out duration-300">
             Home
+          </button>
+        </Link>
+        <Link href="/about">
+          <button className="text-neutral-500 hover:text-black ease-in-out duration-300">
+            About
           </button>
         </Link>
         <Link href="/courses">
@@ -46,17 +54,23 @@ const Header = () => {
             Courses
           </button>
         </Link>
+        <Link href="/enrolment">
+          <button className="text-neutral-500 hover:text-black ease-in-out duration-300">
+            Enrolment
+          </button>
+        </Link>
+        <Link href="/results">
+          <button className="text-neutral-500 hover:text-black ease-in-out duration-300">
+            Results
+          </button>
+        </Link>
         <Link href="/contact">
           <button className="text-neutral-500 hover:text-black ease-in-out duration-300">
             Contact
           </button>
         </Link>
-        <Link href="/about">
-          <button className="text-neutral-500 hover:text-black ease-in-out duration-300">
-           About
-          </button>
-        </Link>
       </div>
+
       <div>
         {userProfile!.connected ? (
           <div
