@@ -5,11 +5,12 @@
 
 import Head from "next/head";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import resetFields from "@/lib/resetFields";
 import authStore from "@/store/globalStore";
 import axios from "axios";
+import DefaultButton from "@/components/Buttons/DefaultButton";
 
 const Register = () => {
   const {
@@ -23,6 +24,15 @@ const Register = () => {
     password: "",
     repeat: "",
   });
+  useEffect(() => {
+    authStore.setState({
+      apiResponse: {
+        message: null,
+        status: null,
+      },
+    });
+  }, []);
+
   const checker = (word: any) => {
     if (user.email.length === 0) {
       return true;
@@ -192,20 +202,18 @@ const Register = () => {
                 : "Repeta parola"}
             </label>
           </div>
-          <button
-            onClick={(e) => {
-              handleRegister(e);
-            }}
-            type="submit"
-            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          >
-            {loading ? "Asteapta..." : "Inregistreaza-te"}
-          </button>
-          <Link href={`/auth/login`}>
-            <button className="text-neutral-400 hover:text-neutral-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">
-              Login
-            </button>
-          </Link>
+          <div className="flex flex-col md:flex-row items-center gap-2">
+            <DefaultButton
+              name="Inregistreaza-te"
+              action={(e: any) => handleRegister(e)}
+              loading={loading}
+            />
+            <Link href={`/auth/login`}>
+              <button className="text-neutral-400 hover:text-neutral-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">
+                Login
+              </button>
+            </Link>
+          </div>
         </form>
       </div>
     </div>

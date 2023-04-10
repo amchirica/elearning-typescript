@@ -4,27 +4,29 @@ import {create} from 'zustand'
 export interface AuthStore {
     loading: boolean;
     apiResponse: {
-        message: any;
-        status: boolean;
+        message: any | null;
+        status: boolean | null;
     };
     userProfile?: {
-        email: string | null;
-        firstname: string | null;
-        lastname: string | null;
-        role: string | null;
-        connected: boolean;
+        email?: string | null;
+        firstname?: string | null;
+        lastname?: string | null;
+        role?: string | null;
+        connected?: boolean;
     };
     setProfile: () =>Promise<void>;
     removeProfile: () => void;
     logout: () => Promise<void>;
+    userProfilePopup: boolean;
 }
 
 const authStore = create<AuthStore>((set) => ({
     loading: false,
+    userProfilePopup: false,
     apiResponse: {
         message: null,
         status: false
-    },
+    } || null,
     userProfile: {
         firstname: '',
         lastname: '',
@@ -38,7 +40,6 @@ const authStore = create<AuthStore>((set) => ({
                 method: "GET",
                 url: `/api/auth/checkUser`
             })
-            console.log(data);
             const profile = {
                 ...data.user,
                 connected: true 
