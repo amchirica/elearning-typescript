@@ -84,7 +84,7 @@ const Register = () => {
   return (
     <div className="flex items-center justify-center min-h-screen w-screen px-10">
       <Head>
-        <title>Hei, hai sa iti cream un cont!</title>
+        <title>Register</title>
       </Head>
       <div className="p-10 bg-gray-100 shadow-md border-2 border-gray-200 w-full md:w-1/2">
         {message ? (
