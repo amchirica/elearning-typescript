@@ -27,7 +27,7 @@ function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="mr-4 hover:underline md:mr-6">
+                <a href="/policy" className="mr-4 hover:underline md:mr-6">
                   Privacy Policy
                 </a>
               </li>

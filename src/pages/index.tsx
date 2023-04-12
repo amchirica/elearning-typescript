@@ -9,9 +9,9 @@ const Home = () => {
         <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 z-10 relative">
           <Link
             href="/courses"
-            className="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-blue-700 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-blue-800"
+            className="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-red-700 bg-blue-100 rounded-full dark:bg-red-900 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-red-800"
           >
-            <span className="text-xs bg-blue-600 rounded-full text-white px-4 py-1.5 mr-3">
+            <span className="text-xs bg-red-600 rounded-full text-white px-4 py-1.5 mr-3">
               New
             </span>{" "}
             <span className="text-sm font-medium">Jump to!</span>
@@ -30,7 +30,7 @@ const Home = () => {
             </svg>
           </Link>
           <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-            Vino în lumea limbajelor de programare
+          <span className="text">#Vino în lumea limbajelor de programare</span>
           </h1>
           <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-200">
             La platforma noastră de e-learning pentru programare, ne concentrăm
@@ -66,7 +66,7 @@ const Home = () => {
               />
               <button
                 type="submit"
-                className="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                className="text-white absolute right-2.5 bottom-2.5 bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               >
                 Sign up
               </button>

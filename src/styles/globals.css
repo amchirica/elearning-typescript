@@ -20,6 +20,64 @@
   animation: rotation 1s linear infinite;
 }
 
+.h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+
+}
+
+
+@media (max-width: 768px) { /* Media query pentru ecrane de maxim 768px (exemplu: ecrane de telefon) */
+  .h3 {
+    margin-left: 0; /* Anulăm margin-left pentru a centra pe axa orizontală pe ecrane mobile */
+  }
+}
+
+
+.contact {
+  width: 1300px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 50px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+
+.text {
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: "Helvetica Neue", sans-serif;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid #333;
+  animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* Animatie de tastare */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Animatie de blink caret */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #333;
+  }
+}
+
 @keyframes rotation {
   0% {
     transform: rotate(0deg);
@@ -28,3 +86,6 @@
     transform: rotate(360deg);
   }
 }
+
+
+
