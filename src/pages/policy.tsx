@@ -23,7 +23,7 @@ const Courses = () => {
   }, []);
   return (
     <div className="px-4">
-      <div className="h3"> <h3>Politica de confidențialitate a platformei de e-learning pentru IT</h3></div> 
+      <div className="h3"> <h3>Politica de confidențialitate a platformei e-learning.</h3></div> 
       <div className="bg-gray-50 mt-10 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-12 mb-8">
         <a
           href="/policy"

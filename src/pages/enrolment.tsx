@@ -10,7 +10,7 @@ const About = () => {
       <div className="flex flex-wrap items-center mb-12">
 
 
-        <h3 className="mb-5 text-lg font-medium text-gray-900 dark:text-white">Choose technology:</h3>
+        <h3 className="mb-5 text-lg font-medium text-gray-900 dark:text-white">Choose technology</h3>
         <ul className="grid w-full gap-6 md:grid-cols-3">
 
 

@@ -51,7 +51,7 @@ const Header = () => {
         </Link>
         <Link href="/courses">
           <button className="text-neutral-500 hover:text-black ease-in-out duration-300">
-            Courses
+            Course
           </button>
         </Link>
         <Link href="/enrolment">

@@ -7,11 +7,11 @@ const Contact = () => {
 <form>
     <div className="grid gap-25 mb-16 md:grid-cols-4">
         <div>
-            <label form="first_name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First name</label>
+            <label form="first_name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First_name</label>
             <input type="text" id="first_name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Nume" required/>
         </div>
         <div>
-            <label form="last_name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Last name</label>
+            <label form="last_name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Last_name</label>
             <input type="text" id="last_name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Prenume" required/>
         </div>
         <div>
