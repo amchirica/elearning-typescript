@@ -9,6 +9,137 @@
   transform: translate(-50%, -50%);
 }
 
+.img1 {
+  position: relative; /* Setează poziția relativă pentru a poziționa textul absolut în interiorul acestui container */
+  width: 70%; /* Setează lățimea containerului la 70% */
+  height: 70%; /* Setează înălțimea containerului la 70% */
+  margin-left: auto; /* Plasează imaginea spre dreapta folosind margin-left: auto */
+  margin-right: 50px; /* Setează marginea dreapta la 50px */
+  margin-top: -150px;
+}
+
+@media (max-width: 767px) {
+  /* Reguli de medii pentru ecrane cu lățime maximă de 767px (de exemplu, dispozitive mobile) */
+  .img1 {
+    margin-top: 45px; /* Anulează margin-top negativ pentru a plasa imaginea sub text */
+    margin-bottom: 10px; /* Adaugă o margine inferioară între imagine și text */
+    margin-left: 50px;
+  }
+}
+
+.img {
+  position: relative; /* Setează poziția relativă pentru a poziționa textul absolut în interiorul acestui container */
+  width: 70%; /* Setează lățimea containerului la 100% */
+  height: 70%; /* Setează înălțimea containerului la 100% */
+  margin-left: auto; /* Setează margin-left la auto pentru a centra imaginea pe orizontală */
+  margin-right: auto; /* Setează margin-right la auto pentru a centra imaginea pe orizontală */
+}
+
+/* Stiluri pentru ecrane de dimensiuni mai mici, cum ar fi cele ale dispozitivelor mobile */
+@media (max-width: 767px) {
+  .img {
+    width: 100%; /* Setează lățimea containerului la 100% pentru a se adapta la ecranele mici */
+    height: auto; /* Setează înălțimea containerului la auto pentru a se adapta la conținut */
+    margin-left: 10px; /* Ajustează margin-left pentru a evita lipirea imaginii de marginea stângă */
+    margin-right: 10px; /* Ajustează margin-right pentru a evita lipirea imaginii de marginea dreaptă */
+  }
+}
+
+.transparent-image {
+  opacity: 1.0; /* Setează opacitatea imaginii la 0.5 (50% transparent) */
+  width: 100%; /* Setează lățimea imaginii la 100% */
+  height: 100%; /* Setează înălțimea imaginii la 100% */
+}
+
+.overlay-text {
+  position: absolute; /* Setează poziția absolută pentru a poziționa textul relativ la container */
+  top: 100; /* Setează poziția textului în partea de sus a containerului */
+  left: 0; /* Setează poziția textului în partea stângă a containerului */
+  right: 0; /* Setează poziția textului în partea dreaptă a containerului */
+  bottom: 500px; /* Setează poziția textului în partea de jos a containerului */
+  display: flex; /* Setează display flex pentru a centra textul vertical și orizontal în container */
+  justify-content: center; /* Aliniază textul pe axa orizontală */
+  align-items: center; /* Aliniază textul pe axa verticală */
+  background-color: rgba(96, 96, 96, 0.5); /* Setează culoarea de fundal a textului la alb cu 50% opacitate */
+}
+
+
+
+/* Media query pentru ecrane de rezoluție mai mici, de exemplu telefoane mobile */
+@media (max-width: 767px) {
+  .overlay-text {
+    position: relative;
+    top: unset;
+    bottom: unset;
+    margin-top: 20px; /* Adaugă un spațiu între imagine și text */
+    text-align: center; /* Aliniază textul la centru pe ecranul de rezoluție mică */
+    background-color: rgba(96, 96, 96, 0.7); /* Mărește opacitatea textului pe ecranul de rezoluție mică */
+  }
+}
+
+
+.chart-container {
+  max-width: 100px;
+  margin: 0 auto;
+}
+
+.chart-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 60px;
+}
+
+.chart-subtitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.chart-list {
+  list-style-type: decimal;
+  list-style-position: inside;
+  color: #555;
+}
+
+.chart-list li {
+  margin-bottom: 8px;
+}
+
+.chart-name {
+  font-weight: bold;
+}
+
+.chart-score {
+  font-weight: bold;
+  margin-right: 40px;
+}
+
+.chart-bar {
+  height: 16px;
+  background-color: #0070f3;
+}
+
+
+.hand {
+  position: relative; /* Setează poziția relativă pentru a poziționa textul absolut în interiorul acestui container */
+  width: 30%; /* Setează lățimea containerului la 70% */
+  height: 40%; /* Setează înălțimea containerului la 70% */
+  margin-left: 50px; /* Plasează imaginea spre dreapta folosind margin-left: auto */
+  margin-right: 50px; /* Setează marginea dreapta la 50px */
+  margin-top: -50px;
+}
+
+/* Stiluri pentru ecrane de dimensiuni mai mici, cum ar fi cele ale dispozitivelor mobile */
+@media (max-width: 767px) {
+  .hand {
+    width: 30%; /* Setează lățimea containerului la 100% pentru a se adapta la ecranele mici */
+    height: auto; /* Setează înălțimea containerului la auto pentru a se adapta la conținut */
+    margin-left: 0; /* Elimină marginea stângă */
+    margin-right: 0; /* Elimină marginea dreapta */
+    margin-top: 0; /* Elimină marginea de sus */
+  }
+}
+
 .loader {
   width: 20px;
   height: 20px;
@@ -25,16 +156,14 @@
   justify-content: center;
   align-items: center;
   height: 10vh;
-
 }
 
-
-@media (max-width: 768px) { /* Media query pentru ecrane de maxim 768px (exemplu: ecrane de telefon) */
+@media (max-width: 468px) {
+  /* Media query pentru ecrane de maxim 768px (exemplu: ecrane de telefon) */
   .h3 {
     margin-left: 0; /* Anulăm margin-left pentru a centra pe axa orizontală pe ecrane mobile */
   }
 }
-
 
 .contact {
   width: 1300px;
@@ -45,25 +174,31 @@
   margin-right: 20px;
 }
 
-
 .text {
   font-size: 3rem;
   font-weight: 800;
   font-family: "Helvetica Neue", sans-serif;
-  color: #333;
+  color: #fff;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 0.15em solid #333;
-  animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+  border-right: 0.15em solid #fff;
+  animation: typing 3s steps(40, end) infinite,
+    blink-caret 0.75s step-end infinite;
 }
 
 /* Animatie de tastare */
 @keyframes typing {
-  from {
+  0% {
     width: 0;
+    color: gray;
   }
-  to {
+  50% {
     width: 100%;
+    color: white;
+  }
+  100% {
+    width: 0;
+    color: gray;
   }
 }
 
@@ -74,7 +209,7 @@
     border-color: transparent;
   }
   50% {
-    border-color: #333;
+    border-color: #fff;
   }
 }
 
@@ -86,6 +221,3 @@
     transform: rotate(360deg);
   }
 }
-
-
-
