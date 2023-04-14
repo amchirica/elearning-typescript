@@ -158,7 +158,11 @@
   height: 10vh;
 }
 
+<<<<<<< HEAD
 @media (max-width: 468px) {
+=======
+@media (max-width: 768px) {
+>>>>>>> b8a9604662cab47789d597e95882f2b9caf9ca7c
   /* Media query pentru ecrane de maxim 768px (exemplu: ecrane de telefon) */
   .h3 {
     margin-left: 0; /* Anulăm margin-left pentru a centra pe axa orizontală pe ecrane mobile */

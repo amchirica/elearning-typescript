@@ -37,10 +37,15 @@ const Home = () => {
               ></path>
             </svg>
           </Link>
+<<<<<<< HEAD
 
 
           <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl sm:text-center sm:px-4">
             <span className="text text-black">
+=======
+          <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl">
+            <span className="text text-white">
+>>>>>>> b8a9604662cab47789d597e95882f2b9caf9ca7c
               #Vino în lumea limbajelor de programare
             </span>
           </h1>
@@ -92,9 +97,12 @@ const Home = () => {
         </div>
       </div>
 
+<<<<<<< HEAD
 
      
 
+=======
+>>>>>>> b8a9604662cab47789d597e95882f2b9caf9ca7c
       <div className="flex flex-wrap gap-3 justify-center z-40">
         <div className="max-w-sm p-20 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
           <Link href="/courses">
