@@ -87,7 +87,12 @@ const Header = () => {
             </button>
             {userProfilePopup ? (
               <div className="absolute top-[105%] -left-20 w-[7rem] bg-neutral-800 rounded-md text-gray-200 flex flex-col py-2">
-                <button className={buttonClass}>Cursurile mele</button>
+                <Link
+                  href={`/user?user=${userProfile?.email}`}
+                  className={buttonClass}
+                >
+                  <button>Cursurile mele</button>
+                </Link>
                 <Link
                   href={`/user?user=${userProfile?.email}`}
                   className={buttonClass}

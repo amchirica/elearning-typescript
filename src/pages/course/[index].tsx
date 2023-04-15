@@ -8,8 +8,6 @@ function Course({ course }: any) {
   const { userProfile } = authStore();
   const [courseP, setCourse] = useState(course);
 
-  console.log(courseP);
-
   const alreadyEnroled = courseP?.attending.find(
     (user: any) => user.email === userProfile?.email
   );
@@ -28,7 +26,6 @@ function Course({ course }: any) {
         ...course,
         attending: [data.data],
       });
-      console.log(courseP);
     } catch (err) {
       console.log(err);
     }
@@ -83,9 +80,6 @@ export const getServerSideProps = async (ctx: any) => {
       attending: true,
     },
   });
-
-  console.log(course);
-
   return {
     props: {
       course: course,

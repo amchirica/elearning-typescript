@@ -3,106 +3,96 @@ import { ReactElement } from "react";
 import Link from "next/link";
 import Header from "@/components/Header/Header";
 
-
-
 const Home = () => {
   return (
-    <div className="flex flex-col gap-10 mb-20">
-        <div className="img">
-        <img src="images/img1.png" alt="index" className="transparent-image"/>
-        <div className="overlay-text">
-
-
-        <div className="mt-1000 dark:bg-black">
-          <div className="py-80 px-40 mx-auto max-w-screen-xl text-center lg:py-16 z-10 relative sm:align-top">
-          <Link
-            href="/courses"
-            className="inline-flex justify-between items-center py-1 pr-4 mb-7 text-sm text-red-700 bg-blue-100 rounded-full dark:bg-red-900 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-red-800"
-          >
-            <span className="text-xs bg-red-600 rounded-full text-white px-4 py-1.5 mr-3">
-              New
-            </span>{" "}
-            <span className="text-sm font-medium">Jump to!</span>
-            <svg
-              aria-hidden="true"
-              className="ml-2 w-5 h-5"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns=""
-            >
-              <path
-                fill-rule="evenodd"
-                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </Link>
-<<<<<<< HEAD
-
-
-          <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl sm:text-center sm:px-4">
-            <span className="text text-black">
-=======
-          <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl">
-            <span className="text text-white">
->>>>>>> b8a9604662cab47789d597e95882f2b9caf9ca7c
-              #Vino în lumea limbajelor de programare
-            </span>
-          </h1>
-          <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:text-center">
-            La platforma noastră de e-learning pentru programare, ne concentrăm pe piețele în care tehnologia, inovația și capitalul pot debloca valoare pe termen lung și pot stimula creșterea economică.
-          </p>
-
-
-          <form className="w-full max-w-md mx-auto">
-            <label
-              form="default-email"
-              className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
-            >
-              Email sign-up
-            </label>
-            <div className="relative">
-              <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+    <div className="flex flex-col items-center gap-10 mb-20">
+      <div className="flex items-center">
+        <div className="absolute top-40 flex items-center w-full justify-center">
+          <img
+            src="images/img1.png"
+            alt="index"
+            className="-z-10 max-w-[60vw]"
+          />
+        </div>
+        <div className="h-fit mt-10 z-10">
+          <div className="bg-black p-10 bg-opacity-70 w-[90vw] rounded-lg shadow-md shadow-black border border-neutral-700">
+            <div className="flex flex-col items-center p-4 select-none">
+              <Link
+                href="/courses"
+                className="select-none inline-flex justify-between items-center py-1 pr-4 mb-7 text-sm text-red-700 bg-blue-100 rounded-full dark:bg-red-900 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-red-800"
+              >
+                <span className="text-xs bg-red-600 rounded-full text-white px-4 py-1.5 mr-3">
+                  New
+                </span>{" "}
+                <span className="text-sm font-medium">Jump to!</span>
                 <svg
-                  className="w-5 h-5 text-gray-500 dark:text-gray-400"
+                  aria-hidden="true"
+                  className="ml-2 w-5 h-5"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns=""
-                  aria-hidden="true"
                 >
-                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
-                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                  <path
+                    fillRule="evenodd"
+                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                    clipRule="evenodd"
+                  ></path>
                 </svg>
-              </div>
-              <input
-                type="email"
-                id="default-email"
-                className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Enter your email here..."
-                required
-              />
-              <button
-                type="submit"
-                className="text-white absolute right-2.5 bottom-2.5 bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              >
-                Sign up
-              </button>
-              </div>
-            </form>
+              </Link>
+              <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl">
+                <span className="text">
+                  <span>#Vino în lumea limbajelor de programare</span>
+                  <span className="blinking-caret">|</span>
+                </span>
+              </h1>
+              <p className="mb-8 text-lg font-normal text-white lg:text-xl sm:text-center">
+                La platforma noastră de e-learning pentru programare, ne
+                concentrăm pe piețele în care tehnologia, inovația și capitalul
+                pot debloca valoare pe termen lung și pot stimula creșterea
+                economică.
+              </p>
+
+              <form className="w-full max-w-md mx-auto">
+                <label
+                  form="default-email"
+                  className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+                >
+                  Email sign-up
+                </label>
+                <div className="relative">
+                  <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                    <svg
+                      className="w-5 h-5 text-gray-500 dark:text-gray-400"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns=""
+                      aria-hidden="true"
+                    >
+                      <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                      <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                    </svg>
+                  </div>
+                  <input
+                    type="email"
+                    id="default-email"
+                    className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Enter your email here..."
+                    required
+                  />
+                  <button
+                    type="submit"
+                    className="text-white absolute right-2.5 bottom-2.5 bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  >
+                    Sign up
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div className="bg-gradient-to-b from-blue-50 to-transparent dark:from-blue-900 w-full h-full absolute top-0 left-0 -z-10"></div>
           </div>
-          <div className="bg-gradient-to-b from-blue-50 to-transparent dark:from-blue-900 w-full h-full absolute top-0 left-0 z-0"></div>
-        </div>
-
-
         </div>
       </div>
 
-<<<<<<< HEAD
-
-     
-
-=======
->>>>>>> b8a9604662cab47789d597e95882f2b9caf9ca7c
       <div className="flex flex-wrap gap-3 justify-center z-40">
         <div className="max-w-sm p-20 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
           <Link href="/courses">
@@ -128,9 +118,9 @@ const Home = () => {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                clip-rule="evenodd"
+                clipRule="evenodd"
               ></path>
             </svg>
           </Link>
@@ -160,9 +150,9 @@ const Home = () => {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                clip-rule="evenodd"
+                clipRule="evenodd"
               ></path>
             </svg>
           </Link>
@@ -188,9 +178,9 @@ const Home = () => {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                clip-rule="evenodd"
+                clipRule="evenodd"
               ></path>
             </svg>
           </Link>

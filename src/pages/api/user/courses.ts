@@ -35,7 +35,6 @@ export default auth(handler.put(async (req, res) => {
             email: userId
         }
     })
-    console.log(req.body);
     try {
         const data = await prisma.user.update({
             where: {
@@ -54,7 +53,6 @@ export default auth(handler.put(async (req, res) => {
             data: data
         })
     } catch (err) {
-        console.log(err)
         return res.status(500).send({
             message: 'Opps, nu te-am putut inrola!'
         })
